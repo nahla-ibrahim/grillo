@@ -1,0 +1,129 @@
+.modal {
+  .modal.fade {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .modal.show {
+    opacity: 1;
+  }
+
+  .modal-content {
+    background-color: black;
+    color: white;
+    border: 1px solid $first-color;
+  }
+
+  .modal-body {
+    .modal-close {
+      right: 0;
+      top: 0;
+      position: absolute;
+      color: $first-color;
+      background-color: transparent;
+      border: none;
+    }
+
+    .modal-title {
+      font-family: "Dancing Script", cursive;
+    }
+
+    .form {
+      border: none;
+      border-radius: 10px;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border: $first-color; //?????????????
+      }
+    }
+
+    p span {
+      color: $first-color;
+    }
+
+    .signup,
+    .signIn {
+      a {
+        color: $first-color;
+      }
+    }
+  }
+}
+
+.scrolled {
+  background-color: black;
+}
+
+.navbar {
+  z-index: 100;
+  max-width: 100vw;
+  transition: background-color 0.4s ease-in-out;
+
+  .navbar-brand {
+    font-family: "Dancing Script", cursive;
+  }
+
+  .navbar-toggler {
+
+    .togglers {
+      gap: 6px;
+    }
+
+    .toggler {
+      width: 2rem;
+      height: 4px;
+      background-color: white;
+      border-radius: 6px;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .navbar-close {
+    background-color: transparent;
+    line-height: 0;
+    width: 56px;
+    height: 32px;
+    animation-name: closerotate;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes closerotate {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .anim {
+    animation-name: togglerrotate;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes togglerrotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: white;
+
+        &:hover {
+          color: $first-color;
+        }
+      }
+
+      .active {
+        color: $first-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.about {
+  background-color: black;
+
+  .container {
+    @media(max-width:767px) {
+      flex-direction: column;
+    }
+
+    .img {
+      img {
+        width: 25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.footer {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+
+  h4 {
+    font-family: "Dancing Script", cursive;
+  }
+
+  .contact-text {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: $first-color;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .icons {
+    a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: black;
+      background-color: white;
+      display: flex;
+      line-height: -1;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: $first-color;
+      }
+    }
+  }
+}

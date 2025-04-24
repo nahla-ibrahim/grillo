@@ -1,0 +1,54 @@
+.offer {
+  max-width: 100vw;
+  overflow: hidden;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  .container {
+    gap: 25px;
+
+    .box1,
+    .box2 {
+      gap: 10px;
+      border-radius: 6px;
+    }
+
+    .img {
+      width: 180px;
+      height: 180px;
+      border: 6px solid $first-color;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease-in-out;
+      }
+
+      img:hover {
+        width: 110%;
+        height: 110%;
+      }
+    }
+
+    .offer-contact {
+
+      h5,
+      h6,
+      span {
+        font-family: "Dancing Script", cursive;
+      }
+
+      span {
+        font-size: 3rem;
+      }
+
+      button {
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
