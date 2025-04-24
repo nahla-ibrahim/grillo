@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Grillio</title>
+</head>
+
+<body>
+  <!--------------------- Modal ---------------------->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content d-flex flex-column">
+        <div class="modal-body">
+          <div class="nav nav-tabs d-block border-0" role="tablist">
+            <div class="tab-content" id="tab-content">
+              <div class="tab-pane active" id="signInModal" role="tabpanel" aria-labelledby="openSignIn">
+                <button type="button" class="modal-close p-2 m-2 fs-5 d-flex align-items-center justify-content-center"
+                  data-bs-dismiss="modal" aria-label="Close">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <a class="modal-title navbar-brand fs-3 text-center d-block mb-4 w-75 p-3 mx-auto" href="#"
+                  id="signInModalLabel"><span class="fs-1 text-capitalize">g</span>rillio
+                </a>
+
+                <div class="signin-btn d-flex justify-content-evenly mb-4">
+                  <a href="https://www.google.com/" class="btn rounded text-capitalize px-5 fs-6 d-block p-3"> sign
+                    in <i class="fa-brands fa-google"></i></a>
+                  <a href="https://github.com/" class="btn rounded text-capitalize px-5 fs-6 d-block p-3"> sign in <i
+                      class="fa-brands fa-github"></i></a>
+                </div>
+
+                <span class="text-uppercase text-center d-block mb-4 "> or </span>
+
+                <input type="email" placeholder="email" class="form text-capitalize p-3 mb-4 d-block w-100">
+
+                <input type="password" placeholder="password" class="form text-capitalize p-3 mb-4 d-block w-100">
+
+
+                <button type="button" class="btn w-100 mb-4" data-bs-dismiss="modal"> <a href="#"
+                    class="btn rounded text-capitalize px-5 fs-6 d-block p-2"> sign in </a>
+                </button>
+                <a href="#" class="text-decoration-none text-light text-capitalize text-center w-100 d-block mb-4">
+                  forgot
+                  password? </a>
+                <div class="signup w-100 text-center mb-4 d-flex align-items-center justify-content-center">
+                  <a href="#" class="text-decoration-none text-light text-capitalize"> not a
+                    member yet?
+                  </a>
+                  <div class="nav-item" role="presentation">
+                    <a class="nav-link py-0 px-1 text-capitalize border-0" id="openSignUp" data-bs-toggle="tab"
+                      href="#signUpModal" role="tab" aria-controls="signUpModal" aria-selected="false">sign up</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="signUpModal" role="tabpanel" aria-labelledby="openSignUp">
+                <button type="button" class="modal-close p-2 m-2 fs-5 d-flex align-items-center justify-content-center"
+                  data-bs-dismiss="modal" aria-label="Close">
+                  <i class="fa-solid fa-xmark"></i> </button>
+
+                <a class="modal-title navbar-brand fs-3 text-center d-block mb-4 w-75 p-3 mx-auto" href="#"
+                  id="signUpModalLabel"><span class="fs-1 text-capitalize">g</span>rillio
+                </a>
+
+                <div class="signin-btn d-flex justify-content-evenly mb-4">
+                  <a href="https://www.google.com/" class="btn rounded text-capitalize px-5 fs-6 d-block p-3"> sign
+                    up <i class="fa-brands fa-google"></i></a>
+                  <a href="https://github.com/" class="btn rounded text-capitalize px-5 fs-6 d-block p-3"> sign up <i
+                      class="fa-brands fa-github"></i></a>
+                </div>
+
+                <span class="text-uppercase text-center d-block mb-4 "> or </span>
+
+                <input type="username" placeholder="name" class="form text-capitalize p-3 mb-4 d-block w-100">
+
+                <input type="email" placeholder="email" class="form text-capitalize p-3 mb-4 d-block w-100">
+
+                <input type="password" placeholder="password" class="form text-capitalize p-3 mb-4 d-block w-100">
+
+
+                <button type="button" class="btn w-100 mb-4" data-bs-dismiss="modal"> <a href="#"
+                    class="btn rounded text-capitalize px-5 d-block p-2"> sign up </a>
+                </button>
+
+                <p class="text-light text-center w-100 mb-4"> By creating an account you are agree
+                  with our <span class="text-capitalize">Privacy </span> and <span class="text-capitalize">Policy</span>
+                </p>
+                <div class="signIn d-flex justify-content-center w-100 align-items-center mb-4">
+                  <p class="text-light text-capitalize m-0"> already have an account? </p>
+                  <div class="nav-item" role="presentation">
+                    <a class="nav-link active py-0 px-1 text-capitalize border-0" id="openSignIn" data-bs-toggle="tab"
+                      href="#signInModal" role="tab" aria-controls="signInModal" aria-selected="true">sign in</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------nav--------------------- -->
+  <nav class="navbar navbar-expand-lg position-fixed w-100 top-0">
+    <div class="container">
+      <a class="navbar-brand fs-3 text-light" href="index.html"><span class="fs-1 text-capitalize">g</span>rillio</a>
+      <button class="navbar-toggler border-0 shadow-none fs-2 text-light d-lg-none " type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <div class="togglers d-flex flex-column ">
+          <span class="toggler"></span>
+          <span class="toggler"></span>
+          <span class="toggler"></span>
+        </div>
+      </button>
+      <button class="navbar-close border-0 shadow-none fs-1 hide text-light  d-lg-none" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-xmark"></i> </button>
+
+      <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+        <ul class="navbar-nav nav-pages mb-2 mb-lg-0 text-center align-items-center">
+          <li class="nav-item px-3 py-1 fs-6">
+            <a class="nav-link active text-uppercase " aria-current="page" href="index.html">home</a>
+          </li>
+          <li class="nav-item px-3 py-1 fs-6">
+            <a class="nav-link text-uppercase " href="menu.html">menu</a>
+          </li>
+          <li class="nav-item px-3 py-1 fs-6">
+            <a class="nav-link text-uppercase " href="about.html">about</a>
+          </li>
+          <li class="nav-item px-3 py-1 fs-6">
+            <a class="nav-link text-uppercase" href="book.html">book table</a>
+          </li>
+        </ul>
+        <ul
+          class="navbar-nav mb-2 mb-lg-0 align-items-center d-flex flex-row gap-3 gap-lg-0 justify-content-center  ms-5 ">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li class="nav-item ms-md-2 ">
+            <button type="button" class="btn rounded-pill text-capitalize px-3 px-md-5 fs-6" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              sign in
+            </button>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ------------------landing--------------------- -->
+  <div class="landing position-relative">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="50000">
+      <div class="container">
+        <div class="carousel-circle d-flex justify-content-start align-items-center position-absolute">
+          <button type="button" class="active" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="overlay position-absolute w-100 h-100 top-0 bottom-0 right-0 left-0 "></div>
+          <img src="images/pexels-catscoming-1907228.jpg" class="d-block w-100" alt="">
+          <div class="container">
+            <div class="landing-caption position-absolute w-90">
+              <div class=" animate__animated animate__fadeInRight">
+                <h2 class="mb-3 text-capitalize fst-italic">fast food restaurant</h2>
+                <p class="mb-4 w-90 pe-sm-5">Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad
+                  mollitia laborum
+                  quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                  nihil ducimus libero ipsam.
+                </p>
+                <button type="button" class="btn rounded-pill text-capitalize px-5 fs-6">
+                  order now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="overlay position-absolute w-100 h-100 top-0 bottom-0 right-0 left-0 "></div>
+          <img src="images/pexels-catscoming-699544.jpg" class="d-block w-100" alt="...">
+          <div class="container">
+            <div class="landing-caption position-absolute w-90">
+              <div class="animate__animated animate__slideInRight">
+                <h2 class="mb-3 text-capitalize fst-italic ">fast food restaurant</h2>
+                <p class="mb-4 w-90 pe-sm-5">Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad
+                  mollitia
+                  laborum
+                  quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                  nihil ducimus libero ipsam.
+                </p>
+                <button type="button" class="btn rounded-pill text-capitalize px-5 fs-6">
+                  order now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="overlay position-absolute w-100 h-100 top-0 bottom-0 right-0 left-0 "></div>
+          <img src="images/pexels-daniel-reche-718241-4080532.jpg" class="d-block w-100" alt="...">
+          <div class="container ">
+            <div class="landing-caption position-absolute w-90">
+              <div class="animate__animated animate__slideInRight">
+                <h2 class="mb-3 text-capitalize fst-italic">fast food restaurant</h2>
+                <p class="mb-4 w-90 pe-sm-5">Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad
+                  mollitia
+                  laborum
+                  quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                  nihil ducimus libero ipsam.s
+                </p>
+                <button type="button" class="btn rounded-pill text-capitalize px-5 fs-6">
+                  order now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------offer--------------------- -->
+  <div class="offer ">
+    <div class="container d-flex justify-content-center flex-md-row flex-column align-items-center">
+      <div class="box1 d-flex bg-dark p-3 align-items-center flex-sm-row flex-column w-75 w-md-100">
+        <div class="img"> <img src="images/pexels-sabrina-martins-2149920013-31415302.jpg" alt=""
+            class=" object-fit-cover">
+        </div>
+        <div class="offer-contact ">
+          <h5 class="text-capitalize text-light mb-0"> Tasty Thursdays </h5>
+          <h6 class="text-light d-flex text-capitalize align-items-end"><span>20%
+            </span> &nbsp; off</h6>
+          <button type="button" class="btn rounded-pill text-capitalize px-4 fs-6 ">
+            order now <a href="#"> <i class="fa-solid fa-cart-shopping "></i></a></button>
+        </div>
+      </div>
+      <div class="box2 d-flex bg-dark p-3 align-items-center flex-sm-row flex-column w-75 w-md-100">
+        <div class="img"> <img src="images/pexels-catscoming-699544.jpg" alt="" class=" object-fit-cover">
+        </div>
+        <div class="offer-contact ">
+          <h5 class="text-capitalize text-light mb-0"> Pizza Days</h5>
+          <h6 class="text-light d-flex text-capitalize align-items-end"><span>15% </span> &nbsp; off</h6>
+          <button type="button" class="btn rounded-pill text-capitalize px-4 fs-6 ">
+            order now <a href="#"> <i class="fa-solid fa-cart-shopping "></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ------------------menu--------------------- -->
+  <div class="menu">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="section-title"> our menu</h1>
+      <div class="menu-buttons d-flex flex-row justify-content-center align-items-center flex-wrap text-center mb-4">
+        <button class="btn filter-btn active rounded-pill text-capitalize " data-filter="all"> all
+        </button>
+
+        <button class="btn filter-btn rounded-pill text-capitalize" data-filter="burger"> burger</button>
+
+        <button class="btn filter-btn rounded-pill text-capitalize" data-filter="pizza">pizza</button>
+
+        <button class="btn filter-btn rounded-pill text-capitalize" data-filter="pasta">pasta</button>
+
+        <button class="btn filter-btn rounded-pill text-capitalize" data-filter="bread">bread</button>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-6 col-lg-4 boxes pasta p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/1pasta-.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious pasta </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $15 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes bread p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/1bread.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious bread </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $5 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes pizza p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/pizza-3.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious pizza </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $12 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes  pizza p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/pizza-2.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold"> Delicious Pizza </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $40 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes burger p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/burger-1.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious burger </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $17 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes bread p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/3bread.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious bread </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $25 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes pizza p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/pizza-4.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious pizza </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $20 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes pasta p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/5pasta-.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious Pasta </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $10 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 boxes pasta p-3 active">
+          <div class="box bg-dark rounded-4">
+            <div class="img">
+              <img src="images/2pasta-.jpg">
+            </div>
+            <div class="card-content text-light py-4 px-3 text-start">
+              <h5 class="fw-bold text-capitalize"> Delicious Pasta </h5>
+              <p class="fw-light">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                voluptatem
+                repellendus sed
+                eaque </p>
+              <div class="box-footer d-flex justify-content-between align-items-center">
+                <p class="fs-5 my-3"> $35 </p>
+                <button class="menu-btn rounded-circle"> <i class="fa-solid fa-cart-shopping text-light "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn rounded-pill text-capitalize px-5 fs-6  mt-4">
+        <a href="menu.html"> view more </a>
+      </button>
+    </div>
+  </div>
+
+  <!------------------about--------------------- -->
+  <div class="about py-5 ">
+    <div class="container row d-flex align-items-center justify-content-center m-auto">
+      <div class="img col text-center pe-0 order-1 order-md-0">
+        <img class="mw-100" src="images/about-img.png">
+      </div>
+      <div class="about-contact col text-light ps-0 order-0 order-md-1">
+        <h3 class="text-capitalize section-title fst-italic "> we are grillo</h3>
+        <p class="fs-6"> There are many variations of passages of Lorem Ipsum available, but the majority
+          have suffered
+          alteration in
+          some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+          going
+          to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
+          of
+          text. All</p>
+        <button type="button" class="btn rounded-pill text-capitalize px-5 fs-6  my-3 mb-md-0">
+          <a href="about.html"> read more </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!------------------book a table -------------------- -->
+  <div class="book">
+    <div class="container">
+      <h1 class="section-title ">book a table</h1>
+      <div class="row align-items-center justifiy-content-center">
+        <div class="col-md-6">
+          <div class="mb-3 ">
+            <input type="text" class="form-control fs-6 ps-4 shadow-none  border-secondary-subtle"
+              placeholder="your name" aria-label="your name">
+          </div>
+          <div class=" mb-3 ">
+            <input type="tel" class="form-control fs-6 ps-4 shadow-none  border-secondary-subtle"
+              placeholder="phone number " />
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control fs-6 ps-4 shadow-none  border-secondary-subtle"
+              aria-describedby="emailHelp" placeholder="your email" />
+          </div>
+          <div class="mb-3">
+            <select class="form-control fs-6 ps-4 shadow-none  border-secondary-subtle"
+              aria-label="Default select example">
+              <option selected> how many person?</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="3">4</option>
+            </select>
+          </div>
+          <div class="mb-3 mb-md-0">
+            <input type="date" class="form-control fs-6 ps-4 shadow-none  border-secondary-subtle" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <iframe class="w-100 mw-100"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7292972.453317565!2d25.584197713603363!3d26.80743748478819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2seg!4v1745283527980!5m2!1sen!2seg"
+            width="400" height="300" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="my-3">
+        <button type="submit" class="btn rounded-pill order-1 order-md-0 form-control-lg text-capitalize px-5 fs-6">
+          <a href="book.html"> book now </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!------------------feedback -------------------- -->
+  <div class="feedback">
+    <div class="container">
+      <h1 class="section-title text-center"> What Says Our Customers </h1>
+
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active mh-100" style="height: fit-content; ">
+            <div class="row gap-3 m-0">
+              <div class="fed-content col-md ">
+                <div
+                  class="text p-4 rounded-1 bg-dark text-light d-flex justify-content-between align-items-start flex-column ">
+                  <div class="review">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos alias delectus amet distinctio
+                      sunt.Lorem ipsum dolor sitamet consectetur.
+                    </p>
+                  </div>
+                  <div class="reviewer">
+                    <p class="fs-5 bold mb-1 text-capitalize">gamal farouk</p>
+                    <p class="mb-0">designer</p>
+                  </div>
+                </div>
+                <div class="img position-relative">
+                  <img class="mw-100 " src="images/h-1.jpg">
+                </div>
+              </div>
+              <div class="fed-content col-md ">
+                <div
+                  class="text p-4 rounded-1 text-light bg-dark d-flex justify-content-between align-items-start flex-column ">
+                  <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aliquid quis optio voluptates
+                    </p>
+                  </div>
+                  <div class="reviewer">
+                    <p class="fs-5 bold mb-1 text-capitalize">mahmoad osman</p>
+                    <p class="mb-0">developer</p>
+                  </div>
+                </div>
+                <div class="img position-relative">
+                  <img class="mw-100" src="images/h-2.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="height: fit-content; ">
+            <div class="row gap-3 m-0">
+              <div class="fed-content col-md ">
+                <div
+                  class="text p-4 rounded-1 bg-dark text-light d-flex justify-content-between align-items-start flex-column ">
+                  <div class="review">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos alias delectus amet distinctio
+                      sunt.Lorem ipsum dolor sitamet consectetur.
+                    </p>
+                  </div>
+                  <div class="reviewer">
+                    <p class="fs-5 bold mb-1 text-capitalize">samir elkady</p>
+                    <p class="mb-0">project manager</p>
+                  </div>
+                </div>
+                <div class="img position-relative">
+                  <img class="mw-100 " src="images/h-3.jpg">
+                </div>
+              </div>
+              <div class="fed-content col-md ">
+                <div
+                  class="text p-4 rounded-1 text-light bg-dark d-flex justify-content-between align-items-start flex-column ">
+                  <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aliquid quis optio voluptates
+                    </p>
+                  </div>
+                  <div class="reviewer">
+                    <p class="fs-5 bold mb-1 text-capitalize">ahmed mohamed</p>
+                    <p class="mb-0">developer</p>
+                  </div>
+                </div>
+                <div class="img position-relative">
+                  <img class="mw-100" src="images/h-4.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class=" carousel-control-prev prev m-md-0" style="margin-left: -18px;" type="button"
+          data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next next m-md-0" style="margin-right: -18px;" type="button"
+          data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!------------------footer-------------------- -->
+  <div class="footer bg-black text-light">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col-12  col-md-4 text-center mb-5">
+          <h4 class="fs-2 text-capitalize mb-4">contact us</h4>
+          <div class="contact-text">
+            <a href="" class="d-flex justify-content-center align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="mb-0">location</p>
+            </a>
+            <a href="" class="d-flex justify-content-center align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-phone"></i>
+              <p class="mb-0">cal +012876432323</p>
+            </a>
+            <a href="" class=" d-flex justify-content-center align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-envelope-open"></i>
+              <p class="mb-0">grillo@gmail.com</p>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <h4 class="fs-2 text-capitalize mb-4">grillo</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic tempora dolorum 3000 tenetur</p>
+          <div class="icons d-flex justify-content-center align-items-center gap-2 text-align-center">
+            <a href=""><i class="fa-brands fa-instagram "></i></a>
+            <a href=""><i class="fa-brands fa-twitter "></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f "></i></a>
+            <a href=""><i class="fa-brands fa-youtube "></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in "></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <h4 class="fs-2 text-capitalize mb-4">opening hours</h4>
+          <p class="text-capitalize">everyday</p>
+          <p> 10.00 Am -10.00 Pm </p>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p class="text-center">&copy 2025 All Rights Reserved By<a href=""> Free Html Templates </a> </p>
+        <p class="text-center">&copy Distributed <a href="">By ThemeWagon </a></p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!------------------js-------------------- -->
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/master.js"></script>
+
+  <script src="js/all.min.js"></script>
+
+</body>
+
+</html>
